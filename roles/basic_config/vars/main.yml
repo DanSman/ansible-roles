@@ -1,0 +1,20 @@
+---
+
+packages:
+  - ubuntu-release-upgrader-core
+  - software-properties-common
+  - ansible
+  - curl
+  - git
+  - htop
+  - net-tools
+  - nmap
+  - python3-pip
+  - python3-setuptools
+  - resolvconf
+  - rsync
+  - screen
+  - tmux
+  - traceroute
+  - vim
+  - whois
