@@ -8,3 +8,4 @@ Available roles:
 - `sshd/`: Configure sshd on a server
 - `virtualization/`: Install all packages to virtualize over KVM
 - `wireguard/`: Create wireguard configuration for clients and servers
+- `user_management/`: Create users with ssh pubkeys, etc.
