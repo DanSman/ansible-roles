@@ -21,7 +21,7 @@
 
 - name: Add pubkeys to users
   authorized_key:
-    user: "{{ item[0] }}"
+    user: "{{ item[0].username }}"
     state: present
     key: "{{ item[1] }}"
   when: "create_{{ item[0].username }} | default([])"
