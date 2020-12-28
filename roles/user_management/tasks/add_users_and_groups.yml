@@ -1,0 +1,30 @@
+---
+
+- name: Create needed groups
+  group:
+    name: "{{ item[1] }}"
+    state: present
+  when: "create_{{ item[0].username }} | default([])"
+  with_subelements:
+    - "{{ users | default([]) }}"
+    - groups
+
+- name: Add users
+  user:
+    name: "{{ item.username }}"
+    comment: "{{ item.comment | default }}"
+    group: "{{ item.usergroup }}"
+    groups: "{{ item.groups }}"
+    shell: "{{ item.shell }}"
+  when:  create_{{ item.username }} | default([])
+  loop: "{{ users | default([]) }}"
+
+- name: Add pubkeys to users
+  authorized_key:
+    user: "{{ item[0] }}"
+    state: present
+    key: "{{ item[1] }}"
+  when: "create_{{ item[0].username }} | default([])"
+  with_subelements:
+    - "{{ users | default([]) }}"
+    - pubkeys
