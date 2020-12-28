@@ -14,7 +14,7 @@
     name: "{{ item.username }}"
     comment: "{{ item.comment | default }}"
     group: "{{ item.usergroup }}"
-    groups: "{{ item.groups }}"
+    groups: "{{ item.groups | default(omit) }}"
     shell: "{{ item.shell }}"
   when:  create_{{ item.username }} | default([])
   loop: "{{ users | default([]) }}"
