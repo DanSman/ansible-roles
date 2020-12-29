@@ -8,6 +8,7 @@
   with_subelements:
     - "{{ users | default([]) }}"
     - groups
+    - skip_missing: yes
 
 - name: Add users
   user:
@@ -28,3 +29,4 @@
   with_subelements:
     - "{{ users | default([]) }}"
     - pubkeys
+    - skip_missing: yes
