@@ -12,6 +12,18 @@ Role Variables
 Example Playbook
 ----------------
 
-    - hosts: servers
-      roles:
-         - ansible-roles/base_config
+With docker-compose:
+```yaml
+- hosts: servers
+  roles:
+     - ansible-roles/base_config
+```
+
+Without docker-compose:
+```yaml
+- hosts: servers
+  vars:
+    install_dockercompose: False
+  roles:
+     - ansible-roles/base_config
+```
