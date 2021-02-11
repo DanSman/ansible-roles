@@ -1,29 +1,20 @@
 basic_config
 =========
 
-This role is setting up every server with a basic configuration.
+This role is setting up every server with a basic configuration and its hostname.
 
 Role Variables
 --------------
 
-- **packages:** This list contains all packages which are getting installed with apt.
-- **pip_packages:** A list with pip/python packages to be installed.
+- **hostname**: The hostname of the server -> no default when not defined
+- **packages[see defaults](https://github.com/mkapra/ansible-roles/blob/772cf51765c715b0a64d1453d8c4f3d238392ec6/roles/basic_config/vars/main.yml#L3):** This list contains all packages which are getting installed with apt.
+- **additional_packages**: Packages to be installed, specified outside this role
 
-Example Playbooks
+Example Playbook
 -----------------
 
-With docker-compose:
 ```yaml
 - hosts: servers
-  roles:
-     - ansible-roles/base_config
-```
-
-Without docker-compose:
-```yaml
-- hosts: servers
-  vars:
-    install_dockercompose: False
   roles:
      - ansible-roles/base_config
 ```
