@@ -1,7 +1,10 @@
 wireguard
 =========
 
-TODO
+Configures wireguard interfaces and the configs for its clients.
+The configuration files will be located in:
+  - server: `/etc/wireguard/wg<0-X>.conf`
+  - clients: `/etc/wireguard/clients/wg<0-X>/<clientname>.conf`
 
 Role Variables
 --------------
