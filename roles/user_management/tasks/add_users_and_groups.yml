@@ -10,6 +10,13 @@
     - groups
     - skip_missing: yes
 
+- name: Create user groups
+  group:
+    name: "{{ item.usergroup }}"
+    state: present
+  when: "create_{{ item.username }} | default([])"
+  loop: "{{ users | default([]) }}"
+
 - name: Add users
   user:
     name: "{{ item.username }}"
