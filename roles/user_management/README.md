@@ -1,7 +1,7 @@
 user-management
 =========
 
-This role creates users with its groups and public keys for SSH.
+This role creates users with its groups (optional) and public keys for SSH (optional).
 
 Role Variables
 --------------
@@ -29,7 +29,8 @@ create_testuser: true
 
 Example Playbook
 ----------------
-
-    - hosts: servers
-      roles:
-         - ansible-roles/user_management
+```yaml
+- hosts: servers
+  roles:
+     - ansible-roles/user_management
+```
