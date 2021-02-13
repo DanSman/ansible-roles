@@ -4,6 +4,7 @@ Available roles:
 
 - [`basic_config/`](roles/basic_config): Basic configuration for all of my servers
 - [`docker/`](roles/docker): Install docker and docker-compose
+- [`iptables/`](roles/iptables): Configures the firewall with the iptables program
 - [`nginx/`](roles/nginx): Create simple reverse proxy nginx config files
 - [`sshd/`](roles/sshd): Configure sshd on a server
 - [`user_management/`](roles/user_management): Create users with ssh pubkeys, etc.
