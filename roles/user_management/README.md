@@ -31,7 +31,7 @@ create_testuser: true
 
 Add groups to user on a specific host only:
 ```yaml
-hostname_groups:
+<hostname>_groups:
  - libvirt
 ```
 
