@@ -13,7 +13,7 @@
     state: directory
     owner: root
     group: root
-    mode: '0400'
+    mode: "0400"
 
 - name: Copy file
   become: yes
@@ -22,7 +22,7 @@
     dest: /root/scripts/arch-audit.sh
     owner: root
     group: root
-    mode: '0100'
+    mode: "0100"
 
 - name: Check availability of cronie (crontab) and install it if necessary
   become: yes

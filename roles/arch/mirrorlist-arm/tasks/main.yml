@@ -20,8 +20,8 @@
   become: yes
   replace:
     dest: "/etc/pacman.d/mirrorlist.backup"
-    regexp: '^# Server'
-    replace: 'Server'
+    regexp: "^# Server"
+    replace: "Server"
 
 - name: Run rankmirror
   become: yes
