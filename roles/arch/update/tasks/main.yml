@@ -1,0 +1,36 @@
+---
+- name: Create update logs directory
+  become: yes
+  file:
+    dest: /var/log/pikaur-update/
+    state: directory
+
+- name: Arch Linux FULL Update via `pikaur -Syu`
+  become: true
+  shell: pikaur -Syu --noconfirm --noedit
+  register: pikaur
+  # aur:
+  #   upgrade: yes
+  #   use: pikaur
+  #   extra_args: "--noconfirm --noedit"
+
+- name: Show output
+  debug:
+    msg: "{{ pikaur.stdout.split('\n') }}"
+
+- name: Write results to logfile
+  blockinfile:
+   create: yes
+   path: "path/pikaur.logs"
+   insertbefore: BOF
+   block: "{{ pikaur.stdout.split('\n') }}"
+   marker: "# {{ inventory_hostname }} {{ ansible_date_time.iso8601_basic_short }} {mark}\n"
+  delegate_to: localhost
+
+- name: Write update log to file
+  become: yes
+  copy:
+    content: "{{ pikaur.stdout.split('\n') }}"
+    dest: "/var/log/pikaur-update/update-{{ ansible_date_time.iso8601_basic_short }}.log"
+  no_log: False
+  ignore_errors: yes
