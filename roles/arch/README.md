@@ -6,4 +6,5 @@ Available roles:
 - [`arch/arch-audit/`](arch-audit): Install arch-audit and run it every day.
 - [`arch/mirrorlist/`](mirrorlist): Update Arch mirrorlist.
 - [`arch/mirrorlist-arm/`](mirrorlist-arm): Update Arch ARM mirrorlist.
-- [`arch/pacman_logs/`](pacman_logs): Check any warnings of pacman. Like `.pacnew` files.
+- [`arch/pacman_logs/`](pacman_logs): Check any warnings of pacman. Like
+  `.pacnew` files.
