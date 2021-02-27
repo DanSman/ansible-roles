@@ -1,0 +1,39 @@
+---
+- name: Install arch-audit
+  become: yes
+  community.general.pacman:
+    update_cache: yes
+    name: arch-audit
+    state: present
+
+- name: Create script folder
+  become: yes
+  file:
+    dest: /root/scripts/
+    state: directory
+    owner: root
+    group: root
+    mode: '0400'
+
+- name: Copy file
+  become: yes
+  copy:
+    src: files/arch-audit,sh
+    dest: /root/scripts/arch-audit.sh
+    owner: root
+    group: root
+    mode: '0100'
+
+- name: Check availability of cronie (crontab) and install it if necessary
+  become: yes
+  community.general.pacman:
+    update_cache: yes
+    name: cronie
+    state: present
+
+- name: Run script every day
+  ansible.builtin.cron:
+    name: "arch-audit"
+    minute: "0"
+    hour: "6"
+    job: "/root/scripts/arch-audit.sh"
