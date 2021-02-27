@@ -2,8 +2,10 @@
 
 Available roles:
 
+- [`arch/`](roles/arch): Specific Arch Linux roles
 - [`basic_config/`](roles/basic_config): Basic configuration for all of my servers
 - [`docker/`](roles/docker): Install docker and docker-compose
+- [`install_package/`](roles/install_package): Install package/s.
 - [`iptables/`](roles/iptables): Configures the firewall with the iptables program
 - [`nginx/`](roles/nginx): Create simple reverse proxy nginx config files
 - [`sshd/`](roles/sshd): Configure sshd on a server
