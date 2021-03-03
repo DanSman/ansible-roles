@@ -1,6 +1,18 @@
 # update
 
-Full Arch system upgrade via AUR-Helper (pikaur).
+Full Arch system upgrade via AUR-Helper.
+
+## Role Variables
+
+```yaml
+arch_update:
+  - AUR_helper: pikaur
+    AUR_logfile: ~/pikaur.logs
+    AUR_directory: /var/log/pikaur-update/
+```
+
+> __Note:__  
+> "Write results to logfile (`AUR_logfile:`)" is stored locally (on your Ansible machine). 
 
 ## Example Playbook
 
@@ -10,5 +22,5 @@ Full Arch system upgrade via AUR-Helper (pikaur).
   hosts: allarch
 
   roles:
-    - ansible-roles/arch/update
+    - ansible-roles/roles/arch/update
 ```
