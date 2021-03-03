@@ -2,8 +2,7 @@
 
 Install arch-audit and run it every day.
 
-> **Note:**
-> Email notification works only with the [msmtp-role](roles/msmtp).
+> **Note:** Email notification works only with the [msmtp-role](roles/msmtp).
 
 ## Role Variables
 
