@@ -10,5 +10,5 @@ Install package/s.
   hosts: server
 
   roles:
-    - ansible-roles/install_package
+    - ansible-roles/roles/install_package
 ```

@@ -40,5 +40,5 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - ansible-roles/user_management
+     - ansible-roles/roles/user_management
 ```

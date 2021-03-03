@@ -11,7 +11,7 @@ With docker-compose:
 - hosts: servers
   vars:
   roles:
-     - ansible-roles/docker
+     - ansible-roles/roles/docker
 ```
 
 Without docker-compose:
@@ -20,5 +20,5 @@ Without docker-compose:
   vars:
     install_dockercompose: False
   roles:
-     - ansible-roles/docker
+     - ansible-roles/roles/docker
 ```

@@ -11,4 +11,4 @@ Example Playbook
 
     - hosts: servers
       roles:
-         - ansible-roles/sshd
+         - ansible-roles/roles/sshd

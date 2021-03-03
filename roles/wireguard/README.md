@@ -33,5 +33,5 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - ansible-roles/wireguard
+     - ansible-roles/roles/wireguard
 ```

@@ -43,5 +43,5 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - ansible-roles/nginx
+     - ansible-roles/roles/nginx
 ```
