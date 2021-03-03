@@ -1,7 +1,7 @@
 ---
 - name: Install pacman-contrib for rankmirror
   become: yes
-  community.general.pacman:
+  pacman:
     update_cache: yes
     name: pacman-contrib
     state: present
