@@ -13,5 +13,5 @@ Example Playbook
 ```yaml
 - hosts: servers
   roles:
-     - ansible-roles/virtualization
+     - ansible-roles/roles/virtualization
 ```
