@@ -1,13 +1,10 @@
-sshd
-=========
+# sshd
 
 TODO
 
-Role Variables
---------------
+## Role Variables
 
-Example Playbook
-----------------
+## Example Playbook
 
     - hosts: servers
       roles:

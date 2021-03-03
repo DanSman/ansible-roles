@@ -11,8 +11,9 @@ arch_update:
     AUR_directory: /var/log/pikaur-update/
 ```
 
-> __Note:__  
-> "Write results to logfile (`AUR_logfile:`)" is stored locally (on your Ansible machine). 
+> **Note:**  
+> "Write results to logfile (`AUR_logfile:`)" is stored locally (on your Ansible
+> machine).
 
 ## Example Playbook
 

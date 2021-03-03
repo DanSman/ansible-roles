@@ -5,6 +5,7 @@ Install msmtp.
 ## Role Variables
 
 ### Minimum
+
 ```yaml
 msmtp:
   - host: mail.example.com

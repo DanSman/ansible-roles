@@ -1,20 +1,23 @@
 # arch-audit
-Install arch-audit and run it every day.  
 
-> __Note:__  
+Install arch-audit and run it every day.
+
+> **Note:**  
 > Email notification works only with the [msmtp-role](roles/msmtp).
 
 ## Role Variables
 
 ### Without email notification
+
 ```yaml
-arch_audit: 
+arch_audit:
   - send_email: false
 ```
 
 ### With email notification
+
 ```yaml
-arch_audit: 
+arch_audit:
   - send_email: true
     email: email@example.com
 ```
@@ -22,6 +25,7 @@ arch_audit:
 ## Example Playbook
 
 ### Without email notification
+
 ```yaml
 ---
 - name: Install arch-audit
@@ -32,6 +36,7 @@ arch_audit:
 ```
 
 ### With email notification
+
 ```yaml
 ---
 - name: Install arch-audit

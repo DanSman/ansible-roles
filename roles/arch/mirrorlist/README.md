@@ -2,14 +2,12 @@
 
 Update Arch mirrorlist.
 
-
 ## Role Variables
 
 ```yaml
 mirrorlist:
   - country: country=DE
 ```
-
 
 ## Example Playbook
 
