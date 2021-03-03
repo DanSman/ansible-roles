@@ -10,5 +10,5 @@ Check any warnings of pacman. Like `.pacnew` files.
   hosts: allarch
 
   roles:
-    - ansible-roles/arch/pacman_logs
+    - ansible-roles/roles/arch/pacman_logs
 ```
