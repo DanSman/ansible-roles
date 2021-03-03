@@ -10,5 +10,5 @@ Update Arch ARM mirrorlist.
   hosts: archarm
 
   roles:
-    - ansible-roles/arch/mirrorlist-arm
+    - ansible-roles/roles/arch/mirrorlist-arm
 ```
